@@ -5,11 +5,7 @@
   "steps": [
     {
       "title": "Prerequisites",
-      "description": "## Prerequisites\n\nThis workspace contains an Express sample app with OIDC support implemented. In this lab, we will build the Universal Logout (UL) endpoint for this app.\n\n### Troubleshooting: \nAs we move through the lab and edit the app, we will test it incrementally."
-    },
-    {
-      "title": "Sign in to the Okta Admin Dashboard",
-      "description": "## Sign in to the Okta Admin Dashboard\n\n1. Navigate to [learning.okta.com](http://learning.okta.com/)\n2. Select the course that you auto signed up for when you registered for the lab. For this lab - it would be “Okta Universal Logout:  Securing Your Applications with Global Token Revocation”\n3. You’ll find your Okta org details there.\n3. Copy the **Link** to your Okta preview org.\n4. Open an **incognito** browser window and paste the Okta preview org link. \n>It's important to use an incognito browser window to log in as Admin as we will using another non-incognito browser window to log in as an end user later.\n5. Log in as the admin user using the credentials provided.\n6. Once you're logged into Okta, you should see an **Admin** button at the top of the page. Click this button to see your Admin console."
+      "description": "## Introduction\n\nYour enterprise customers expect you to safeguard them from common security incidents, especially when it comes to compromised user accounts. Perhaps a user has signed in from a known stolen device or another country outside the list of allowed IP zones. If a hacker is masquerading as one of your customer's employees, potentially accessing sensitive company data, you must end their session and log them out of your app immediately. \n\nBottom line: If you build SaaS applications for enterprise-level customers who leverage Identity Providers (IdPs), workflows, and threat-detection tools, adding Universal Logout to your app is the solution to ending suspicious user sessions as soon as possible. \n\nIn this lab, you will learn to add a secure Universal Logout API endpoint to a web app, we'll use Okta as the IdP to initiate user logout and end their active session.\n\n### Prerequisites\n\nThis workspace contains an Express sample app with OIDC support implemented. In this lab, we will build the Universal Logout (UL) endpoint for this app.\n\n### Troubleshooting: \nAs we move through the lab and edit the app, we will test it incrementally."
     },
     {
       "title": "Set up an OIDC app integration in Okta",
@@ -27,7 +23,7 @@
     },
     {
       "file": ".okta.env",
-      "description": "## Update ORG_URL environment variable\n\nNotice that the `.okta.env` file has been opened for you. Let's update the `OKTA_ORG_URL` environment variable.\n\nRecall that can copy your Okta org's URL from the side panel in your VM under **Link**.\n\nThe value of this variable should be a string of the form: `\"https://oktaice#######.oktapreview.com\"`",
+      "description": "## Update ORG_URL environment variable\n\nNotice that the `.okta.env` file has been opened for you. Let's update the `OKTA_ORG_URL` environment variable.\n\nRecall that can copy your Okta org's URL from the lab session in Okta Learning.\n\nThe value of this variable should be a string of the form: `\"https://oktaice#######.oktapreview.com\"`",
       "line": 1,
       "title": "Update ORG_URL environment variable",
       "selection": {
@@ -43,7 +39,7 @@
     },
     {
       "file": ".okta.env",
-      "description": "## Update CLIENT_ID and CLIENT_SECRET environment variables\n\nNotice that the `.okta.env` file has been opened for you. Using the client credentials details on your Okta app's OIDC integration page, update the **CLIENT_ID** and **CLIENT_SECRET** environment variables. All variables must be stored as strings.\n\nAfter you have updated the environment variables, this file should look similar to below:\n```\nORG_URL=https://oktaice#######.oktapreview.com\nCLIENT_ID=myClientIdString\nCLIENT_SECRET=myClientSecretString\n```\n\nClick [here](command:workbench.action.files.save) to save your changes to this file.",
+      "description": "## Update CLIENT_ID and CLIENT_SECRET environment variables\n\nNotice that the `.okta.env` file has been opened for you. Using the client credentials details on your Okta app's OIDC integration page, update the **CLIENT_ID** and **CLIENT_SECRET** environment variables. All variables must be stored as strings.\n\nAfter you have updated the environment variables, this file should look similar to below:\n```\nORG_URL=\"https://oktaice#######.oktapreview.com\"\nCLIENT_ID=\"myClientIdString\"\nCLIENT_SECRET=\"myClientSecretString\"\n```\n\nClick [here](command:workbench.action.files.save) to save your changes to this file.",
       "line": 3,
       "title": "Update environment variables: OKTA_CLIENT_ID and OKTA_CLIENT_SECRET",
       "selection": {

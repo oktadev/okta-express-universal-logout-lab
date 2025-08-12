@@ -1,11 +1,11 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
-  "title": "0 - Dev Lab: Universal Logout ",
+  "title": "0 - Sign in to your Okta training org",
   "nextTour": "1 - Get the sample app up and running",
   "steps": [
     {
-      "title": "Introduction",
-      "description": "Your enterprise customers expect you to safeguard them from common security incidents, especially when it comes to compromised user accounts. Perhaps a user has signed in from a known stolen device or another country outside the list of allowed IP zones. If a hacker is masquerading as one of your customer's employees, potentially accessing sensitive company data, you must end their session and log them out of your app immediately. \n\nBottom line: If you build SaaS applications for enterprise-level customers who leverage Identity Providers (IdPs), workflows, and threat-detection tools, adding Universal Logout to your app is the solution to ending suspicious user sessions as soon as possible. \n\nIn this lab, you will learn to add a secure Universal Logout API endpoint to a web app, we'll use Okta as the IdP to initiate user logout and end their active session."
+      "title": "Sign in to your Okta training org",
+      "description": "## Sign in to your Okta training org\n\n1. From the lab session in Okta Learning, select **Get Started**.\n1. Select **Show Credentials** to display the credentials for your Okta training org.\n1. Sign in to the Okta training org using two-factor authentication.\n    -  Open the Okta training org URL in an **incognito** browser window. \n        > **Tip**: It's important to use an incognito browser window to log in as Admin because you will use another non-incognito browser window to log in as an end user later.\n    - Enter the username and password for the admin account.\n    - Set up Okta Verify for the admin account.\n        - For Okta Verify, select **Set up**.\n        - If a message appears to open Okta Verify, select **Cancel**.\n        - Select the **set up Okta Verify on a mobile device** link.\n        - Follow the steps on the page to set up Okta Verify.\n        > **Tip**: From Okta Verify on your mobile device, select **+** to add an account and choose the **Organization** account type.\n\n1. Access the Admin Console.\n    > **Note**: This user has Super Administrator permissions.\n    - From the End-User Dashboard, select **Admin**.\n    - Verify that you are signed in to the Admin Console.\n\n> **Important**: The Okta training org includes additional users for testing. The password for each user in the org is the same as the admin account password.\n"
     }
   ]
 }
